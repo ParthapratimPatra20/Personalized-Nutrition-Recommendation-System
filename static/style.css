@@ -1,0 +1,17 @@
+.bg{
+background: aqua;
+}
+.mt-100{
+    margin-top: 100px;
+}
+
+
+.navbar a{
+    display: flex;
+    justify-content: left;
+    gap: 162px;
+}
+
+.btn:hover{
+    background: fixed;
+}
