@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+    .bgnav{
+        background: linear-gradient(135deg, #ffe4e1 0%, #ACB6E5 100%);
+
+        }
+    .container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    height: 500px;  /* Set height as you want */
+    background: linear-gradient(135deg, #ffe4e1 0%, #ACB6E5 100%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+ .navbar {
+      background-color: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: #0d6efd !important;
+    }
+
+/* Left Side – Image */
+.right {
+    flex: 1; /* Takes 50% width */
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Side – Login Form */
+.left {
+    flex: 1; /* Takes 50% width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7f7f7;
+}
+
+.login-box {
+    width: 70%;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+    </style>
+  </head>
+  <body class="bg-nav" style="background: linear-gradient(135deg, #ffe4e1 0%, #ACB6E5 100%);">
+    
+     <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3" href="/">Nutrify</a>
+      <div class="collapse navbar-collapse justify-content-end me-3">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active text-dark fw-bold" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-dark fw-bold" href="/about">About Us</a></li>
+          <li class="nav-item">
+            <a class="btn btn-success ms-2" href="/predict">Get your Personalized Diet</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-danger ms-2" href="/logout">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+ 
+
+
+<div class="container" style="margin-top:70px; width: 728px;  display: flex;
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    <div class="left">
+        <form class="login-box" method="post" action="/login_validation">
+            <h1>Welcome</h1>
+            <h4 style="font-size: medium;">Login to your account</h4>
+            
+            <input type="email" name="email" placeholder="Email" style="width: 238px;">
+            <input type="password" name="password" placeholder="Password" style="width: 238px;">
+            <button type="submit" style="width: 70px;">Login</button>
+            <p class="register-text">Not a member? <a href="/register"> Create account</a></p>
+        </form>
+        
+    </div>
+    <div class="right">
+        <img src="static/thumbnail-1.jpeg" alt="Image">
+    </div>
+
+    
+</div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
+
+
+
+
+
+
